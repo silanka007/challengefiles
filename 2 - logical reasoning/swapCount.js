@@ -66,6 +66,6 @@ function swapCount(inputArray){
 console.log(swapCount([3,2,5,2,5,6,2]));
 console.log(swapCount([2,7,5]));
 console.log(swapCount([8,5,8,3,0,7,7,1]));
-console.log(swapCount([-9, -1, 0]));
+console.log(swapCount([-9, -4, -1, -6, -3, 0]));
 console.log(swapCount(["-3", "-1", 0]));
 console.log(swapCount("hello"));

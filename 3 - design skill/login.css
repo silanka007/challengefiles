@@ -1,8 +1,9 @@
+
 body{
     margin: 0;
     background: rgb(65, 65, 223);
     font-size: normal;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: 'Times New Roman', Times, serif;
 
 }
 
@@ -12,39 +13,32 @@ form{
     flex-direction: column;
     margin:0px 3rem;
     padding: 30px 20px;
-    border: solid 1px rgb(23, 23, 179);;
 }
 
 
 input{
     height: 30px;
-
+    border: solid 1px rgb(41, 38, 38);
 }
-    input:active label{
-        opacity: 0;
-
+    input:invalid:not(:focus):not(:placeholder-shown), input:invalid:focus:not(:placeholder-shown){
+        background: url("./invalid.png") no-repeat 100% 50%;
+        background-size: 25px;
     }
-    input:invalid::after{
-        border: solid 2px red;
-    }
-    input:valid{
-        background:repeat-no url('./valid.png' );
-        background-size: 20px;
-        border: solid 2px green;
+    input:focus:valid, input:valid{
+        background: url("./valid.png") no-repeat 100% 50%;
+        background-size: 25px;
     }
 
 
 label{
-    color: rgb(87, 84, 84);
-    position: relative;
-    top: 22px;
-    left: 20px;
-    font-size: small;
+    color: rgb(41, 38, 38);
+    font-size: ;
 }
 
 
 .login--section{
     background: white;
+    display: grid;
     max-width: 500px;
     border-radius: 30px;
     height: auto;
@@ -60,14 +54,17 @@ label{
 }
 
 button{
-    position: relative;
-    padding: 10px 20px;
-    margin-top: 20px;
-    font-size: large;
+    display: block;
+	width: 100%;
+	margin: 20px 0;
+	color: white;
+	border: 0;
+	padding: 10px;
+	font-size: 1.2rem;
 }
     .btn--dark{
         color: white;
-        background: rgb(23, 23, 179);
+        background: rgb(65, 65, 223);
 
         -webkit-box-shadow: 0 -1px 0 rgb(34, 34, 206);
         -moz-box-shadow: 0 -1px 0 rgb(34, 34, 206);
@@ -82,10 +79,35 @@ button{
         text-shadow: 0 1px 0 rgb(52, 52, 172);
     }
     .btn--dark:hover{
-        background: rgb(3, 3, 83);
+        background: rgb(16, 16, 100);
     }
     .btn--dark:active{
-        background: rgb(83, 83, 223);
+        background: rgb(55, 55, 150);
     }
     
 
+.forgotten-pwd{
+    margin-top: 4px;
+    color: rgb(41, 38, 38);
+}
+
+.password--info{
+    font-size: x-small;
+    margin-bottom: 5px;
+    color: #ee8f0b;
+
+}
+
+
+@media only screen and (max-width: 520px) {
+.login--section{
+    background: white;
+    display: grid;
+    max-width: 340px;
+    border-radius: 30px;
+    height: auto;
+    margin: auto;
+    margin-top: 10%;
+    border: solid 1px rgb(23, 23, 179);
+}
+}
