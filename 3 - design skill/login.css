@@ -1,0 +1,91 @@
+body{
+    margin: 0;
+    background: rgb(65, 65, 223);
+    font-size: normal;
+    font-family: Arial, Helvetica, sans-serif;
+
+}
+
+form{
+    align-content: center;
+    display: flex;
+    flex-direction: column;
+    margin:0px 3rem;
+    padding: 30px 20px;
+    border: solid 1px rgb(23, 23, 179);;
+}
+
+
+input{
+    height: 30px;
+
+}
+    input:active label{
+        opacity: 0;
+
+    }
+    input:invalid::after{
+        border: solid 2px red;
+    }
+    input:valid{
+        background:repeat-no url('./valid.png' );
+        background-size: 20px;
+        border: solid 2px green;
+    }
+
+
+label{
+    color: rgb(87, 84, 84);
+    position: relative;
+    top: 22px;
+    left: 20px;
+    font-size: small;
+}
+
+
+.login--section{
+    background: white;
+    max-width: 500px;
+    border-radius: 30px;
+    height: auto;
+    margin: auto;
+    margin-top: 10%;
+    border: solid 1px rgb(23, 23, 179);
+}
+
+.form-item{
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+button{
+    position: relative;
+    padding: 10px 20px;
+    margin-top: 20px;
+    font-size: large;
+}
+    .btn--dark{
+        color: white;
+        background: rgb(23, 23, 179);
+
+        -webkit-box-shadow: 0 -1px 0 rgb(34, 34, 206);
+        -moz-box-shadow: 0 -1px 0 rgb(34, 34, 206);
+        -o-box-shadow: 0 -1px 0 rgb(34, 34, 206);
+        -ms-box-shadow: 0 -1px 0 rgb(34, 34, 206);
+        box-shadow: 0 -1px 0 rgb(34, 34, 206);
+
+        -webkit-text-shadow: 0 1px 0 rgb(52, 52, 172);
+        -moz-text-shadow: 0 1px 0 rgb(52, 52, 172);
+        -o-text-shadow: 0 1px 0 rgb(52, 52, 172);
+        -ms-text-shadow: 0 1px 0 rgb(52, 52, 172);
+        text-shadow: 0 1px 0 rgb(52, 52, 172);
+    }
+    .btn--dark:hover{
+        background: rgb(3, 3, 83);
+    }
+    .btn--dark:active{
+        background: rgb(83, 83, 223);
+    }
+    
+
